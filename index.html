@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LapFit - Laptop Recommender</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+    body {
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background-color: #1e40af;
+      color: white;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2rem;
+    }
+    section.hero {
+      padding: 3rem 2rem;
+      text-align: center;
+      background: white;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    section.hero h2 {
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+    }
+    section.hero p {
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .cta-button {
+      margin-top: 2rem;
+      background-color: #1e40af;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .cta-button:hover {
+      background-color: #1a3691;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #e5e7eb;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>LapFit</h1>
+    <p>Your Smart Laptop Recommender</p>
+  </header>
+  <section class="hero">
+    <h2>Find Your Perfect Laptop</h2>
+    <p>Whether you're a gamer, student, professional, or casual user, LapFit helps you find the right laptop that fits your needs and budget.</p>
+    <button class="cta-button">Start Recommending</button>
+  </section>
+  <footer>
+    &copy; 2025 LapFit. All rights reserved.
+  </footer>
+
+  <script>
+    window.watsonAssistantChatOptions = {
+      integrationID: "929fe1ef-d644-4d97-ae29-ee17614a407b",
+      region: "eu-de",
+      serviceInstanceID: "35417427-847b-40f6-bdba-0bd40f145a71",
+      onLoad: async (instance) => { await instance.render(); }
+    };
+    setTimeout(function() {
+      const t = document.createElement('script');
+      t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+      document.head.appendChild(t);
+    });
+  </script>
+</body>
+</html>
